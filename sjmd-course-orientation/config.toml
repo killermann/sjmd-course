@@ -2,7 +2,7 @@ baseURL = "https://course.sjmd.space"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 title = "Orientation"
-theme = "hugo-theme-learn"
+theme = "hugo-theme-teach"
 themesdir = "../themes/"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
