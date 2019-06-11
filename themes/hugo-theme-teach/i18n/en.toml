@@ -13,14 +13,17 @@ other = "Error"
 [message-404]
 other = "Whoops. Looks like this page doesn't exist ¯\\_(ツ)_/¯."
 
-[Enter]
-other = "Enter"
+[Get-started]
+other = "Get started"
 
 [Begin-lesson]
 other = "Begin lesson"
 
-[Move-on]
-other = "Move on"
+[Back]
+other = "Back"
+
+[Next]
+other = "Next"
 
 [Go-to-homepage]
 other = "Go to homepage"

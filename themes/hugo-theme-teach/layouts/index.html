@@ -12,8 +12,8 @@
 
 {{if $showPrevNext}}
 	{{with ($.Scratch.Get "nextPage")}}
-	<nav class="next-entry">
-		<a class="btn btn-icon" href="{{.URL}}" title="{{.Title}}">{{T "Enter"}} <i class="icon far fa-sign-in"></i></a>
+	<nav class="entry-nav">
+		<a class="btn btn-icon" href="{{.URL}}" title="{{.Title}}">{{T "Get-started"}} <i class="icon far fa-sign-in"></i></a>
 	</nav>
 	{{end}}
 {{end}}

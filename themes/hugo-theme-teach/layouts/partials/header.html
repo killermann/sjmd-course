@@ -31,11 +31,11 @@
         <main id="body">
         <div id="overlay"></div>
         <div class="padding highlightable">
-            {{if not .IsHome}}
             <div id="top-bar">
                 <span id="sidebar-toggle-span">
                     <a href="#" id="sidebar-toggle" title="Toggle Menu" data-sidebar-toggle="">
-                        <i class="far fa-bars"></i>
+                        <i class="far fa-fw fa-bars"></i>
+                        <i class="far fa-fw fa-times"></i>
                     </a>
                 </span>
                 {{ if not .Params.chapter }}
@@ -58,7 +58,6 @@
                 </span>
                 {{ end }}
             </div>
-            {{ end }}
         {{ if .Params.chapter }}
           <div id="chapter">
         {{ end }}

@@ -2,7 +2,6 @@
 
 {{ if eq .Kind "section" }}
 	{{ .Content }}
-
 {{end}}
 
 <!-- Next prev page -->
@@ -42,8 +41,8 @@
 
 {{if $showPrevNext}}
 	{{with ($.Scratch.Get "nextPage")}}
-	<nav class="next-entry">
-		<a class="btn btn-icon" href="{{.URL}}" title="{{.Title}}">{{T "Begin-lesson"}} <i class="icon far fa-play-circle"></i></a>
+	<nav class="entry-nav">
+		<a class="btn btn-icon" href="{{.URL}}" title="{{.Title}}">{{T "Begin-lesson"}} <i class="icon far fa-sign-in"></i></a>
 	</nav>
 	{{end}}
 {{end}}

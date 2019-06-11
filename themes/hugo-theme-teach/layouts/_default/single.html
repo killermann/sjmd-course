@@ -39,14 +39,23 @@
 
 {{$showPrevNext := (and (not .Params.disableNextPrev) (not .Site.Params.disableNextPrev))}}
 
+<nav class="entry-nav">
 {{if $showPrevNext}}
+	{{with ($.Scratch.Get "prevPage")}}
+		<a class="btn prev" href="{{.URL}}" title="{{.Title}}"><i class="far fa-fw fa-chevron-left"></i> {{T "Back"}} </a>
+	{{end}}
+
+	{{ if .Params.discourse }}
+	<a href="{{ .Params.discourse }}" class="btn" target="_blank" title="View Community Thread">
+		Discuss <i class="far fa-fw fa-comment-lines"></i>
+	</a>
+	{{ end }}
+
 	{{with ($.Scratch.Get "nextPage")}}
-	<nav class="next-entry">
-		<a class="btn btn-icon" href="{{.URL}}" title="{{.Title}}">{{T "Move-on"}} <i class="icon far fa-check"></i></a>
-	</nav>
+		<a class="btn next" href="{{.URL}}" title="{{.Title}}">{{T "Next"}} <i class="far fa-fw fa-chevron-right"></i></a>
 	{{end}}
 {{end}}
-
+</nav>
 
 <footer class="entry-footer">
 	{{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
