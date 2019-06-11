@@ -1,0 +1,29 @@
+[
+{
+	"uri": "http://localhost:1313/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:1313/lesson-1/",
+	"title": "Lesson 1",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:1313/",
+	"title": "Orientation",
+	"tags": [],
+	"description": "",
+	"content": " Hugo learn theme Hugo-theme-learn is a theme for Hugo, a fast and modern static website engine written in Go. Where Hugo is often used for blogs, this multilingual-ready theme is fully designed for documentation.\nThis theme is a partial porting of the Learn theme of Grav, a modern flat-file CMS written in PHP.\n"
+},
+{
+	"uri": "http://localhost:1313/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
