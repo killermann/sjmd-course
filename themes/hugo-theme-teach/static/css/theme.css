@@ -34,7 +34,7 @@ body #chapter h1 {
 }
 @media only all and (max-width: 47.938em) {
     body #chapter h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 a {
@@ -43,6 +43,33 @@ a {
 a:hover {
     color: #0082a7;
 }
+
+#body a.highlight, #body a.highlight:hover, #body a.highlight:focus {
+    text-decoration: none;
+    outline: none;
+    outline: 0;
+}
+
+#body a.highlight {
+    display: inline-block;
+}
+
+#body a.highlight:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: currentColor !important;
+    -webkit-transition: width 0.25s ease-out;
+    -moz-transition: width 0.25s ease-out;
+    -ms-transition: width 0.25s ease-out;
+    transition: width 0.25s ease-out;
+}
+
+#body a.highlight:hover:after, #body a.highlight:focus:after {
+    width: 100%;
+}
+
 pre {
     position: relative;
     color: #ffffff;
@@ -79,8 +106,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     background: #8451a1;
     color: #fff;
     text-align: center;
-    border-bottom: 4px solid #9c6fb6;
     padding: .5rem;
+	border: none;
+	z-index: 5;
+	position: relative;
 }
 
 #header #logo {
@@ -93,6 +122,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 	color: white;
 	font-size: 28px;
 	margin: 0 .25em;
+	letter-spacing: .04em;
+	text-rendering: optimizeLegibility;
 }
 #header #logo svg {
     width: 48px;
@@ -313,7 +344,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 	top: 50%;
 	font-size: .65em;
 	padding: .6em .5em .4em;
-	left: 1.5rem;
+	left: calc(1.5rem + 1px);
 	transform: translate(-50%, -50%);
 	z-index: 2;
 	background-color: #9c6fb6;
@@ -345,6 +376,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     position: relative;
     margin-left: 300px;
 }
+
 #body img, #body .video-container {
     margin: 3rem auto;
     display: block;
@@ -455,9 +487,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #body .nav.nav-next {
     right: 0;
 }
+
+
 #body-inner {
-    margin-bottom: 5rem;
-	padding: 0 1.5rem;
+	padding: 6vw 1.5rem;
 }
 
 	.entry-title {
@@ -469,24 +502,27 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 #chapter {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     padding: 2rem 0;
 }
 #chapter #body-inner {
-    padding-bottom: 3rem;
     max-width: 80%;
 }
+
 #chapter h3 {
-    font-weight: 300;
     text-align: center;
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin: 0;
 }
 #chapter h1 {
     font-size: 5rem;
     border-bottom: 4px solid #F0F2F4;
+	padding: 6vh auto;
 }
 #chapter p {
     text-align: center;
@@ -497,6 +533,12 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     color: #b3b3b3;
     font-size: 13px;
 }
+
+.next-entry {
+	margin: 4vw auto;
+	text-align: center;
+}
+
 #footer p {
     margin: 0;
 }
@@ -511,6 +553,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
 	line-height: 1.1;
 }
+
 h1 {
     text-align: center;
 }
@@ -582,6 +625,125 @@ div.notices.tip p {
 }
 div.notices.tip p:first-child:after {
     content: 'Tip';
+}
+
+
+.btn {
+  display: inline-block;
+  padding: .5em 2em;
+  margin-bottom: 0;
+  font-size: .8em;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 500;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 2px solid currentColor;
+  border-radius: 100px;
+  -webkit-transition: all 0.15s;
+     -moz-transition: all 0.15s;
+          transition: all 0.15s;
+}
+
+.btn-icon {
+	padding: .5em 1em .5em 2em;
+}
+
+.btn:focus {
+  /*outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;*/
+  outline: none !important;
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+}
+
+	.btn .icon {
+		margin-left: 1em;
+	}
+
+/* anchors */
+.anchor {
+  color: #00bdf3;
+  font-size: 0.5em;
+  cursor:pointer;
+  visibility:hidden;
+  margin-left: 0.5em;
+    position: absolute;
+    margin-top:0.1em;
+}
+
+h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover .anchor {
+  visibility:visible;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+figcaption h4 {
+    font-weight: 300 !important;
+    opacity: .85;
+    font-size: 1em;
+    text-align: center;
+    margin-top: -1.5em;
+}
+
+.select-style {
+    border: 0;
+    width: 150px;
+    border-radius: 0px;
+    overflow: hidden;
+    display: inline-flex;
+}
+
+.select-style svg {
+    fill: #ccc;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    margin: auto;
+}
+
+.select-style svg:hover {
+  fill: #e6e6e6;
+}
+
+.select-style select {
+    padding: 0;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    margin: auto;
+    margin-left: 0px;
+    margin-right: -20px;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.select-style :hover {
+    cursor:  pointer;
+}
+
+.is-sticky #top-bar {
+  box-shadow: 0 3px 15px -2px rgba(0, 0, 20, 0.25);
 }
 
 /* attachments shortcode */
@@ -1087,7 +1249,12 @@ td {
     #body {
         margin-left: 230px;
     }
+
+	#body .padding {
+		box-shadow: none;
+	}
 }
+
 @media only all and (max-width: 47.938em) {
 
 	#sidebar {
@@ -1099,6 +1266,10 @@ td {
         margin-left: 0;
         width: 100%;
     }
+
+	#body .padding {
+		box-shadow: none;
+	}
 
 	#top-bar .far {
 		font-size: 18px;

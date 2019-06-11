@@ -271,6 +271,7 @@ jQuery(document).ready(function() {
     * We could use pure css for this if only heading anchors were
     * involved, but this works for any anchor, including footnotes
     **/
+    
     (function (document, history, location) {
         var HISTORY_SUPPORT = !!(history && history.pushState);
 

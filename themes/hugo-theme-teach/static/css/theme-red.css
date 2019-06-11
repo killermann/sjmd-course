@@ -5,8 +5,8 @@
     --PRIMARY-COLOR-100: #FFF0EB;
     --PRIMARY-COLOR-300: #FFCEBE;
     --PRIMARY-COLOR-500: #F1592A;
-    --PRIMARY-COLOR-500: #F1592A;
-    --PRIMARY-COLOR-700: #DB3400;
+    --PRIMARY-COLOR-700: #BC2C00;
+    --PRIMARY-COLOR-900: #581500;
 
     --MAIN-TEXT-color:#000; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #000; /* Color of titles h2-h3-h4-h5 */
@@ -15,7 +15,6 @@
     --MAIN-ANCHOR-color: var(--PRIMARY-COLOR-700); /* color of anchors on titles */
 
     --MENU-HEADER-BG-color:var(--PRIMARY-COLOR-500); /* Background color of menu header */
-    --MENU-HEADER-BORDER-color:var(--PRIMARY-COLOR-700); /*Color of menu header border */
 
     --MENU-SEARCH-BG-color:var(--PRIMARY-COLOR-700); /* Search field background color (by default borders + icons) */
     --MENU-SEARCH-BOX-color: var(--PRIMARY-COLOR-700); /* Override search field border color */
@@ -35,11 +34,6 @@
 
 body {
     color: var(--MAIN-TEXT-color) !important;
-}
-
-textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
-    border-color: none;
-    box-shadow: none;
 }
 
 h2, h3, h4, h5 {
@@ -63,25 +57,14 @@ a:hover {
 	color: var(--MENU-VISITED-color);
 }
 
-#body a.highlight:after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 0%;
-    -webkit-transition: width 0.5s ease;
-    -moz-transition: width 0.5s ease;
-    -ms-transition: width 0.5s ease;
-    transition: width 0.5s ease;
-    background-color: var(--MAIN-LINK-HOVER-color);
-}
 #sidebar {
 	background-color: var(--MENU-SECTIONS-BG-color);
 }
 #sidebar #header-wrapper {
     background: var(--MENU-HEADER-BG-color);
     color: var(--MENU-SEARCH-BOX-color);
-    border-color: var(--MENU-HEADER-BORDER-color);
 }
+
 #sidebar .searchbox {
 	border-color: var(--MENU-SEARCH-BOX-color);
     background: var(--MENU-SEARCH-BG-color);
@@ -94,11 +77,11 @@ a:hover {
 }
 
 #sidebar a {
-    color: var(--MENU-SECTIONS-LINK-color);
+    color: var(--PRIMARY-COLOR-900);
 }
 
 #sidebar a:hover {
-    color: var(--MENU-SECTIONS-LINK-HOVER-color);
+    color: var(--PRIMARY-COLOR-700);
 }
 
 #sidebar ul li.active > a {

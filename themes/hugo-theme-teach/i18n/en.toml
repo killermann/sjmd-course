@@ -11,7 +11,16 @@ other = "Attachments"
 other = "Error"
 
 [message-404]
-other = "Woops. Looks like this page doesn't exist ¯\\_(ツ)_/¯."
+other = "Whoops. Looks like this page doesn't exist ¯\\_(ツ)_/¯."
+
+[Enter]
+other = "Enter"
+
+[Begin-lesson]
+other = "Begin lesson"
+
+[Move-on]
+other = "Move on"
 
 [Go-to-homepage]
 other = "Go to homepage"

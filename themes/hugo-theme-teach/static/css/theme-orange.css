@@ -2,11 +2,11 @@
 :root{
 
     /* Set the Theme Colors */
-    --PRIMARY-COLOR-100: #EBFFEE;
-    --PRIMARY-COLOR-300: #ADEFB5;
-    --PRIMARY-COLOR-500: #3AB54A;
-    --PRIMARY-COLOR-700: #0B8B1B;
-    --PRIMARY-COLOR-900: #003B08;
+    --PRIMARY-COLOR-100: #FFF7ED;
+    --PRIMARY-COLOR-300: #FFE0B9;
+    --PRIMARY-COLOR-500: #F7941D;
+    --PRIMARY-COLOR-700: #C66C00;
+    --PRIMARY-COLOR-900: #583000;
 
     --MAIN-TEXT-color:#000; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #000; /* Color of titles h2-h3-h4-h5 */
@@ -64,7 +64,6 @@ a:hover {
     background: var(--MENU-HEADER-BG-color);
     color: var(--MENU-SEARCH-BOX-color);
 }
-
 #sidebar .searchbox {
 	border-color: var(--MENU-SEARCH-BOX-color);
     background: var(--MENU-SEARCH-BG-color);

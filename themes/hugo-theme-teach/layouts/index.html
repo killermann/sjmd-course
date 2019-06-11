@@ -1,11 +1,24 @@
 {{ partial "header.html" . }}
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-{{if .Site.Home.Content }} 
-{{.Site.Home.Content}}	
-{{else}}           
+{{if .Site.Home.Content }}
+{{.Site.Home.Content}}
+
+<!-- Next prev page -->
+{{ $currentNode := . }}
+
+{{ template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode }}
+
+{{$showPrevNext := (and (not .Params.disableNextPrev) (not .Site.Params.disableNextPrev))}}
+
+{{if $showPrevNext}}
+	{{with ($.Scratch.Get "nextPage")}}
+	<nav class="next-entry">
+		<a class="btn btn-icon" href="{{.URL}}" title="{{.Title}}">{{T "Enter"}} <i class="icon far fa-sign-in"></i></a>
+	</nav>
+	{{end}}
+{{end}}
+
+{{else}}
 	{{if eq .Site.Language.Lang "fr"}}
 		<h1>Personaliser la page d'accueil</h1>
 		<p>
@@ -27,5 +40,5 @@
 		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
 		</ul>
 	{{end}}
-{{ end }}  
+{{ end }}
 {{ partial "footer.html" . }}
